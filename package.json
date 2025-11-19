@@ -1,0 +1,20 @@
+{
+  "name": "stremio-addon-SCRAPattern",
+  "version": "0.0.1",
+  "description": "Template de um addon para streaming atraves de WebScraping",
+  "scripts": {
+    "start": "node dist/server.js",
+    "prestart": "npm run build",
+    "build": "tsc",
+    "dev": "ts-node-dev --respawn --transpile-only src/server.ts -- --launch"
+  },
+  "dependencies": {
+    "@types/stremio-addon-sdk": "^1.6.12",
+    "stremio-addon-sdk": "1.1.x",
+    "typescript": "^5.9.3"
+  },
+  "devDependencies": {
+    "@types/node": "^24.10.1",
+    "ts-node-dev": "^2.0.0"
+  }
+}
