@@ -1,9 +1,10 @@
-import { IScrapper } from "../interfaces/IScrapper";
 import { ScraperInput } from "../interfaces/ScraperInput";
+import { BaseScrapper } from "../utils/BaseScrapper";
 import { movieScrapper } from "./ExampleMovie/MovieScrapper";
 import { seriesScrapper } from "./ExampleSeries/SeriesScrapper";
+import { goFlixScrapper } from "./Goflix/GoflixScrapper";
 
-const scrapperRegistry: IScrapper[] = [movieScrapper, seriesScrapper];
+const scrapperRegistry: BaseScrapper[] = [goFlixScrapper];
 
 export async function handleStream(input: ScraperInput): Promise<any[]> {
   let allFoundStreams: any[] = [];

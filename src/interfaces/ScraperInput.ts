@@ -1,12 +1,13 @@
 export interface ScraperInput {
   type: string;
-  stremioId: string; // The original Stremio ID (e.g., "tt1234567:1:1")
+  stremioId: string;
   id: {
-    prefix: string | null; // e.g., "tt", "kitsu"
+    prefix: string | null;
     value: string;
     season: number | null;
     episode: number | null;
   };
-  name: string | null; // Resolved content name, if available (e.g., "The Matrix")
-  extra?: any; // Any extra args from Stremio
+  name: string | null;
+  nameTranslated: string | null;
+  extra?: any;
 }
